@@ -63,8 +63,8 @@ main {
     object-fit: cover;
 }
 button {
-	display: block;
-	width: 120px;
+	display: inline-block;
+	width: 220px;
 	height: 30px;
 	margin: 0 auto;
     margin-top: 10px;

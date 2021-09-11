@@ -77,11 +77,34 @@
 // console.log(parseInt('3.5px'));
 // console.log(parseFloat(('px2.2px3.5').slice(3)));
 
-let r = ['13Абубязов', '3Радик', '220Римович'];
+// let r = ['13Абубязов', '3Радик', '220Римович'];
 
-r.forEach((elem) => {
-    r.shift();
-    r.push(parseInt(elem));
-});
+// r.forEach((elem) => {
+//     r.shift();
+//     r.push(parseString(elem));
+// });
 
-console.log(r);
+// console.log(r);
+// Array: unshift+s, push+e, pop->e, shift->s, indexOf('string')
+
+var obj = {
+    id: 0,
+    name: 'Vasya',
+    year: 1990,
+    family: ['Elena', 'Igor'],
+    car: {
+        model: 'Ford',
+        year: 2001
+    },
+    calcAge: function() {
+        this.age = 2021 - this.year;
+    }
+};
+
+obj.calcAge();
+console.log(obj.age);
+console.log(obj.family[1]);
+console.log(obj.family[0]);
+obj['family'][0] = 'Anna';
+console.log(obj.family[0]);
+

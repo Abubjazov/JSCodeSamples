@@ -71,8 +71,17 @@
 // console.log(stringgg.indexOf('dog'));
 // console.log(8 / 0);
 
-// number: .toString(), toFixed(simbols=3) - округляет в большую сторону и возвращает строку, +string - возвращает число
+// number: .toString(), toFixed(simbols=3) - округляет в большую сторону и возвращает строку, +string - возвращает число, isNaN, isFinite - конечное число или нет
 
 
-console.log(parseInt('3.5px'));
-console.log(parseFloat(('px2.2px3.5').slice(3)));
+// console.log(parseInt('3.5px'));
+// console.log(parseFloat(('px2.2px3.5').slice(3)));
+
+let r = ['13Абубязов', '3Радик', '220Римович'];
+
+r.forEach((elem) => {
+    r.shift();
+    r.push(parseInt(elem));
+});
+
+console.log(r);

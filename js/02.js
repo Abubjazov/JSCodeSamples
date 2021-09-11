@@ -29,18 +29,38 @@
 
 // console.log(message);
 
-let color = 'green';
+// let color = 'green';
 
-switch (color) {
-    case 'red': 
-        console.log('красный');
-        break;
-    case 'yellow': 
-        console.log('джёлтий');
-        break;
-    case 'green': 
-        console.log('зЭлЭнЫй');
-        break;
-    default:
-        console.log('цвет не определён.');
+// switch (color) {
+//     case 'red': 
+//         console.log('красный');
+//         break;
+//     case 'yellow': 
+//         console.log('джёлтий');
+//         break;
+//     case 'green': 
+//         console.log('зЭлЭнЫй');
+//         break;
+//     default:
+//         console.log('цвет не определён.');
+// }
+
+let year = 1985,
+    currentYear = 2021,
+    comparison = 35,
+    compObj = 'Человек';
+
+function calculateAge(year, currentYear) {
+  let result = currentYear - year;
+  return result;
 }
+
+function checkAngLogAge(year, currentYear = 2021, comparison = 10, compObj = 'Автомобиль') {
+  if (calculateAge(year, currentYear) < comparison) {
+    console.log(`Объект: ${compObj}. Возраст меньше ${comparison} лет.`);
+  } else {
+    console.log(`Объект: ${compObj}. Возраст больше ${comparison} лет.`);
+  }
+}
+
+checkAngLogAge(year, currentYear, comparison, compObj);

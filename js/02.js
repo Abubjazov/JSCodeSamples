@@ -87,24 +87,38 @@
 // console.log(r);
 // Array: unshift+s, push+e, pop->e, shift->s, indexOf('string')
 
-var obj = {
-    id: 0,
-    name: 'Vasya',
-    year: 1990,
-    family: ['Elena', 'Igor'],
-    car: {
-        model: 'Ford',
-        year: 2001
-    },
-    calcAge: function() {
-        this.age = 2021 - this.year;
-    }
-};
+// var obj = {
+//     id: 0,
+//     name: 'Vasya',
+//     year: 1990,
+//     family: ['Elena', 'Igor'],
+//     car: {
+//         model: 'Ford',
+//         year: 2001
+//     },
+//     calcAge: function() {
+//         this.age = 2021 - this.year;
+//     }
+// };
 
-obj.calcAge();
-console.log(obj.age);
-console.log(obj.family[1]);
-console.log(obj.family[0]);
-obj['family'][0] = 'Anna';
-console.log(obj.family[0]);
+// obj.calcAge();
+// console.log(obj.age);
+// console.log(obj.family[1]);
+// console.log(obj.family[0]);
+// obj['family'][0] = 'Anna';
+// console.log(obj.family[0]);
 
+let nums = [1, 2, 3, 4, 5, 6, 7, 8, 9];
+
+// nums.forEach(elem => console.log(elem));
+
+// for (let i = 0; i < nums.length; i++) {
+//     console.log(nums[i]);
+// }
+
+// let i = 0;
+// while (i < nums.length) {
+//     console.log(nums[i]);
+//     i++;
+// }
+// plus CONTINUE & BREAK!!!

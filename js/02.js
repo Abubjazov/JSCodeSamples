@@ -65,8 +65,14 @@
 
 // checkAngLogAge(year, currentYear, comparison, compObj);
 
-// string.length, .toUpperCase, .toLowerCase, .charAt(position = 1), .indexOf('string'), .substr(pos=1, simbols=4), substring(pos=1, posEnd-1)
+// string: .length, .toUpperCase, .toLowerCase, .charAt(position = 1), .indexOf('string'), .substr(pos=1, simbols=4), substring(pos=1, posEnd-1)
 
-const stringgg = 'Catdog cat catdog';
-console.log(stringgg.indexOf('dog'));
-console.log(8 / 0);
+// const stringgg = 'Catdog cat catdog';
+// console.log(stringgg.indexOf('dog'));
+// console.log(8 / 0);
+
+// number: .toString(), toFixed(simbols=3) - округляет в большую сторону и возвращает строку, +string - возвращает число
+
+
+console.log(parseInt('3.5px'));
+console.log(parseFloat(('px2.2px3.5').slice(3)));

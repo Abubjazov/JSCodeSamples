@@ -45,22 +45,28 @@
 //         console.log('цвет не определён.');
 // }
 
-let year = 1985,
-    currentYear = 2021,
-    comparison = 35,
-    compObj = 'Человек';
+// let year = 1985,
+//     currentYear = 2021,
+//     comparison = 35,
+//     compObj = 'Человек';
 
-function calculateAge(year, currentYear) {
-  let result = currentYear - year;
-  return result;
-}
+// function calculateAge(year, currentYear) {
+//   let result = currentYear - year;
+//   return result;
+// }
 
-function checkAngLogAge(year, currentYear = 2021, comparison = 10, compObj = 'Автомобиль') {
-  if (calculateAge(year, currentYear) < comparison) {
-    console.log(`Объект: ${compObj}. Возраст меньше ${comparison} лет.`);
-  } else {
-    console.log(`Объект: ${compObj}. Возраст больше ${comparison} лет.`);
-  }
-}
+// function checkAngLogAge(year, currentYear = 2021, comparison = 10, compObj = 'Автомобиль') {
+//   if (calculateAge(year, currentYear) < comparison) {
+//     console.log(`Объект: ${compObj}. Возраст меньше ${comparison} лет.`);
+//   } else {
+//     console.log(`Объект: ${compObj}. Возраст больше ${comparison} лет.`);
+//   }
+// }
 
-checkAngLogAge(year, currentYear, comparison, compObj);
+// checkAngLogAge(year, currentYear, comparison, compObj);
+
+// string.length, .toUpperCase, .toLowerCase, .charAt(position = 1), .indexOf('string'), .substr(pos=1, simbols=4), substring(pos=1, posEnd-1)
+
+const stringgg = 'Catdog cat catdog';
+console.log(stringgg.indexOf('dog'));
+console.log(8 / 0);

@@ -31,21 +31,35 @@
 // div = document.querySelector('h2');
 // div.textContent = 'Changed from JS! )))';
 
-let a = document.querySelector('a');
+// let a = document.querySelector('a');
 // console.log(a.getAttribute('title'));
-let oldHref = a.getAttribute('href');
-console.log(a.attributes);
+// let oldHref = a.getAttribute('href');
+// console.log(a.attributes);
 
-a.setAttribute('href', 'https://yandex.ru');
-a.setAttribute('title', 'Go to Yandex');
-a.textContent = 'Yandex';
+// a.setAttribute('href', 'https://yandex.ru');
+// a.setAttribute('title', 'Go to Yandex');
+// a.textContent = 'Yandex';
 
-let box1 = document.querySelector('#box1');
-let box2 = document.querySelector('#box2');
+// let box1 = document.querySelector('#box1');
+// let box2 = document.querySelector('#box2');
 
-box1.classList.add('green');
-box2.classList.remove('red');
+// box1.classList.add('green');
+// box2.classList.remove('red');
 
-let hasClass = box1.classList.contains('green');
-console.log(hasClass);
+// let hasClass = box1.classList.contains('green');
+// console.log(hasClass);
 
+const button1 = document.querySelector('button');
+const text1 = document.querySelector('input');
+const h1 = document.querySelector('h1');
+
+button1.addEventListener('click', () => {
+    h1.textContent = text1.value;
+});
+
+h1.addEventListener('mouseenter', function() {
+    this.style.color = 'red';
+});
+h1.addEventListener('mouseleave', () => {
+    h1.style.color = 'green';
+});

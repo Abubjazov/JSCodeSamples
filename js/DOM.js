@@ -49,17 +49,46 @@
 // let hasClass = box1.classList.contains('green');
 // console.log(hasClass);
 
-const button1 = document.querySelector('button');
-const text1 = document.querySelector('input');
-const h1 = document.querySelector('h1');
+// const button1 = document.querySelector('button');
+// const text1 = document.querySelector('input');
+// const h1 = document.querySelector('h1');
 
-button1.addEventListener('click', () => {
-    h1.textContent = text1.value;
+// button1.addEventListener('click', () => {
+//     h1.textContent = text1.value;
+// });
+
+// h1.addEventListener('mouseenter', function() {
+//     this.style.color = 'red';
+// });
+// h1.addEventListener('mouseleave', () => {
+//     h1.style.color = 'green';
+// });
+
+let divs = document.querySelectorAll('div');
+let link = document.querySelector('a');
+
+divs.forEach(div => {
+    div.addEventListener('click', function (sp) {
+        sp.stopPropagation();
+        console.log(this.getAttribute('id'));
+    });
 });
 
-h1.addEventListener('mouseenter', function() {
-    this.style.color = 'red';
-});
-h1.addEventListener('mouseleave', () => {
-    h1.style.color = 'green';
-});
+link.addEventListener('click', linkClick);
+
+function linkClick(e) {
+    e.preventDefault();
+
+    // if (divs[0].style.display !=='none') {
+    //     divs[0].style.display = 'none';
+    // } else {
+    //     divs[0].style.display = '';
+    // }
+      
+    divs[0].style.display = divs[0].style.display !== 'none' ? 'none' : '';
+}
+
+
+
+
+

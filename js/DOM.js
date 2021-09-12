@@ -39,3 +39,13 @@ console.log(a.attributes);
 a.setAttribute('href', 'https://yandex.ru');
 a.setAttribute('title', 'Go to Yandex');
 a.textContent = 'Yandex';
+
+let box1 = document.querySelector('#box1');
+let box2 = document.querySelector('#box2');
+
+box1.classList.add('green');
+box2.classList.remove('red');
+
+let hasClass = box1.classList.contains('green');
+console.log(hasClass);
+

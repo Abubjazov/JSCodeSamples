@@ -5,12 +5,29 @@
     <title>Document</title>
     <link href="https://fonts.googleapis.com/css?family=Roboto:300,400&display=swap&subset=cyrillic" rel="stylesheet">
 	<link rel="stylesheet" href="css/style.css">
+	<style>
+		.box {
+			width: 100px;
+			height: 100px;
+			border: 1px solid rgba(0, 0, 0, .5);
+		}
+		.red {
+			background-color: red;
+		}
+		.green {
+			background-color: greenyellow;
+		}
+	</style>
 </head>
 <body>
 
 	<h1>Чито такое DOM DOM DOM, DO DORO DORO DOM...</h1>
 	<p>Это не Доминик Торетто... Прикинь!!! DOM - это Document Object Model</p>
 	<a href="https://google.com" target="_blank" title="Click me!">GOOGLE</a>
+	<hr>
+	<div class="box" id="box1"></div>
+	<div class="box red" id="box2"></div>
+	
 
 	<!-- <button class="feed">Sort by ratingRevievs</button>
 	<button class="price">Sort by price</button>

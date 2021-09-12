@@ -24,3 +24,18 @@
 
 // let div4 = document.querySelectorAll('div#playground > ul li');
 // console.log(div4);
+
+// let div = document.querySelector('#playground');
+// console.log(div.innerHTML);
+// div.innerHTML = '<h2 style="color: red">From JavaScript</h2>';
+// div = document.querySelector('h2');
+// div.textContent = 'Changed from JS! )))';
+
+let a = document.querySelector('a');
+// console.log(a.getAttribute('title'));
+let oldHref = a.getAttribute('href');
+console.log(a.attributes);
+
+a.setAttribute('href', 'https://yandex.ru');
+a.setAttribute('title', 'Go to Yandex');
+a.textContent = 'Yandex';

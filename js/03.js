@@ -54,20 +54,30 @@ let array = str.split(', ');
 // console.log(Math.floor(x));
 // console.log(Math.ceil(x));
 
-let person = {
-    name: 'Foma',
-    surname: 'Kinyaev',
-    rusName: {
-        name: 'Ащьф',
-        surname: 'Лштнфум'
-    },
-    age: 27,
-    job: 'JSON Born',
-    friends: ['Katya', 'Petya', 'Ilana']
-};
+// let person = {
+//     name: 'Foma',
+//     surname: 'Kinyaev',
+//     rusName: {
+//         name: 'Ащьф',
+//         surname: 'Лштнфум'
+//     },
+//     age: 27,
+//     job: 'JSON Born',
+//     friends: ['Katya', 'Petya', 'Ilana']
+// };
 
-let strJSON = JSON.stringify(person);
+// let strJSON = JSON.stringify(person);
 
-console.log(strJSON);
+// console.log(strJSON);
 
-console.log(JSON.parse(strJSON));
+// console.log(JSON.parse(strJSON));
+
+let date = new Date();
+
+console.log(date);
+console.log(date.getDay());
+console.log(date.getSeconds());
+
+date.setDate(13);
+console.log(date.getDate());
+

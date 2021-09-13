@@ -72,12 +72,31 @@ let array = str.split(', ');
 
 // console.log(JSON.parse(strJSON));
 
-let date = new Date();
+// let date = new Date();
 
-console.log(date);
-console.log(date.getDay());
-console.log(date.getSeconds());
+// console.log(date);
+// console.log(date.getDay());
+// console.log(date.getSeconds());
 
-date.setDate(13);
-console.log(date.getDate());
+// date.setDate(13);
+// console.log(date.getDate());
 
+document.querySelector('button').addEventListener('click', (e) => {
+    e.preventDefault();
+
+    let inputValue = document.querySelector('input').value;
+    let objJ = {
+        text: inputValue
+    };
+
+    localStorage.setItem('headerText', inputValue);
+    localStorage.setItem('headerText2', JSON.stringify(objJ));
+});
+
+document.addEventListener('DOMContentLoaded', () => {
+    let text = localStorage.getItem('headerText');
+
+    if (text && text.trim()) {
+        document.querySelector('h1').textContent = text + (JSON.parse(localStorage.getItem('headerText2')).text);
+    }
+});

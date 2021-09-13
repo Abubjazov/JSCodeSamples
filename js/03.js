@@ -45,6 +45,11 @@ let array = str.split(', ');
 // });
 
 // console.log(foundPerson.name);
-console.log('1, 2, 3, 4, 5, 6, 7, 8, 9'.split(', ').filter((i) => {return i % 2 !== 0;}));
-console.log('1, 2, 3, 4, 5, 6, 7, 8, 9'.split(', ').filter((i) => {return i % 2 !== 0;}).map((i) => {return parseInt(i);}));
-console.log('1, 2, 3, 4, 5, 6, 7, 8, 9'.split(', ').filter((i) => {return i % 2 !== 0;}).map((i) => {return i * 1;}));
+// console.log('1, 2, 3, 4, 5, 6, 7, 8, 9'.split(', ').filter((i) => {return i % 2 !== 0;}));
+// console.log('1, 2, 3, 4, 5, 6, 7, 8, 9'.split(', ').filter((i) => {return i % 2 !== 0;}).map((i) => {return parseInt(i);}));
+// console.log('1, 2, 3, 4, 5, 6, 7, 8, 9'.split(', ').filter((i) => {return i % 2 !== 0;}).map((i) => {return i * 1;}));
+console.log(Math.random());
+
+let x = 2.447;
+console.log(Math.floor(x));
+console.log(Math.ceil(x));

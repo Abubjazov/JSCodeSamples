@@ -81,22 +81,22 @@ let array = str.split(', ');
 // date.setDate(13);
 // console.log(date.getDate());
 
-document.querySelector('button').addEventListener('click', (e) => {
-    e.preventDefault();
+// document.querySelector('button').addEventListener('click', (e) => {
+//     e.preventDefault();
 
-    let inputValue = document.querySelector('input').value;
-    let objJ = {
-        text: inputValue
-    };
+//     let inputValue = document.querySelector('input').value;
+//     let objJ = {
+//         text: inputValue
+//     };
 
-    localStorage.setItem('headerText', inputValue);
-    localStorage.setItem('headerText2', JSON.stringify(objJ));
-});
+//     localStorage.setItem('headerText', inputValue);
+//     localStorage.setItem('headerText2', JSON.stringify(objJ));
+// });
 
-document.addEventListener('DOMContentLoaded', () => {
-    let text = localStorage.getItem('headerText');
+// document.addEventListener('DOMContentLoaded', () => {
+//     let text = localStorage.getItem('headerText');
 
-    if (text && text.trim()) {
-        document.querySelector('h1').textContent = text + (JSON.parse(localStorage.getItem('headerText2')).text);
-    }
-});
+//     if (text && text.trim()) {
+//         document.querySelector('h1').textContent = text + (JSON.parse(localStorage.getItem('headerText2')).text);
+//     }
+// });

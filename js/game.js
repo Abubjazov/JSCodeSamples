@@ -11,7 +11,7 @@ function startGame() {
     $startBtn.classList.add('hide');
     $score.parentNode.classList.remove('hide');
     $score.textContent = 0;
-    $time.textContent = (document.querySelector('#game-time').value);
+    $time.textContent = +(document.querySelector('#game-time').value);
     $game.style.background = '#fff';
     gameScore = 0;
 
@@ -39,8 +39,9 @@ function renderBox() {
     let box = document.createElement('div'),
         boxSide = getRandom(20, 100),
         boxTop = getRandom(0, $game.getBoundingClientRect().height - boxSide), 
-        boxLeft = getRandom(0, $game.getBoundingClientRect().width - boxSide),  
-        boxBackColor = 'red' ;
+        boxLeft = getRandom(0, $game.getBoundingClientRect().width - boxSide); 
+        
+    $time.style.color = '';
 
     box.setAttribute('data-box', 'true');
     box.style.cssText = `
@@ -84,6 +85,6 @@ function endGame() {
 }
 
 function randomColor() {
-    let colors = ['black', 'grey', 'red', 'green', 'yellow', 'blue'];
-    return colors[Math.floor(Math.random() * colors.length)];
+    let colors = ['black', 'grey', 'red', 'green', 'yellow', 'blue', 'Fuchsia', 'Lime', 'Olive', 'Aqua', 'Navy', 'Purple', 'OrangeRed', 'DeepPink'];
+    return colors[getRandom(0, colors.length)];
 }

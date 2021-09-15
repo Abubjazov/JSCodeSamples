@@ -11,8 +11,19 @@ function startGame() {
     $startBtn.classList.add('hide');
     $score.parentNode.classList.remove('hide');
     $score.textContent = 0;
-    $time.textContent = document.querySelector('#game-time').value;
+    $time.textContent = (document.querySelector('#game-time').value);
     $game.style.background = '#fff';
+    gameScore = 0;
+
+    let summerTimer = setInterval(() => {
+        if (+$time.textContent > 0) {
+            $time.textContent = ((+$time.textContent) - 0.1).toFixed(1);
+        } else {
+            clearInterval(summerTimer);
+            endGame();
+        }
+    }, 100);
+
     renderBox();
 }
 
@@ -21,7 +32,7 @@ function renderBox() {
 
     // if (isBox) {
     //     isBox.remove();
-    // }
+    // } или 
 
     $game.innerHTML = '';
 
@@ -54,4 +65,20 @@ function gameClickHandler(e) {
 
 function getRandom(min, max) {
     return Math.floor(Math.random() * (max - min) + min);
+}
+
+function endGame() {
+    $time.style.color = 'red';
+    $game.innerHTML = '';
+    $game.style.background = '#ccc';
+    $startBtn.classList.remove('hide');
+    $score.parentNode.classList.add('hide');
+
+    let element = document.createElement('div');
+    element.style.cssText = `
+            position: absolute;
+            top: 10px;
+            `;
+    element.textContent = `Игра окончена. Ваш результат: ${$score.textContent}`;
+    $game.insertAdjacentElement('afterbegin', element);    
 }

@@ -138,6 +138,7 @@ h2 {
   .app__header {
 	padding: 20px;
 	text-align: center;
+	transition: all .3s
   }
   
   .app__content {
@@ -197,6 +198,7 @@ h2 {
 	min-width: 300px;
 	max-width: 300px;
 	max-height: 300px;
+	transition: all .3s
   }
   
   .hide {

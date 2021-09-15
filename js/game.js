@@ -49,7 +49,7 @@ function renderBox() {
                     left: ${boxLeft}px;
                     width: ${boxSide}px;
                     height: ${boxSide}px;
-                    background: ${boxBackColor};
+                    background: ${randomColor()};
                     cursor: pointer;
                 `;
 
@@ -81,4 +81,9 @@ function endGame() {
             `;
     element.textContent = `Игра окончена. Ваш результат: ${$score.textContent}`;
     $game.insertAdjacentElement('afterbegin', element);    
+}
+
+function randomColor() {
+    let colors = ['black', 'grey', 'red', 'green', 'yellow', 'blue'];
+    return colors[Math.floor(Math.random() * colors.length)];
 }

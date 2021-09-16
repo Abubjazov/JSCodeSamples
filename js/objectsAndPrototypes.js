@@ -28,35 +28,51 @@
 // };
     
 
-let ford = Object.create({
-    calcDistPerYear: function() {
-        Object.defineProperty(this, 'distancePerYear', {
-            value: Math.ceil(this.distance / this.age),
-            enumerable: false,
-            writable: false,
-            configurable: false
-        });
-    }
-}, 
-{
-    name: {value: 'Ford', enumerable: true, writable: false, configurable: false},
-    model: {value: 'Focus', enumerable: true, writable: false, configurable: false},
-    year: {value: 2014, enumerable: true, writable: true, configurable: false},
-    distance: {value: 120300, enumerable: true, writable: true, configurable: false},
-    age: {enumerable: true,
-        get: function() {
-            return new Date().getFullYear() - this.year;
-        },
-        set: function(age) {
-            this.year = new Date().getFullYear() - age;
-        }   
-    }
-});
+// let ford = Object.create({
+//     calcDistPerYear: function() {
+//         Object.defineProperty(this, 'distancePerYear', {
+//             value: Math.ceil(this.distance / this.age),
+//             enumerable: false,
+//             writable: false,
+//             configurable: false
+//         });
+//     }
+// }, 
+// {
+//     name: {value: 'Ford', enumerable: true, writable: false, configurable: false},
+//     model: {value: 'Focus', enumerable: true, writable: false, configurable: false},
+//     year: {value: 2014, enumerable: true, writable: true, configurable: false},
+//     distance: {value: 120300, enumerable: true, writable: true, configurable: false},
+//     age: {enumerable: true,
+//         get: function() {
+//             return new Date().getFullYear() - this.year;
+//         },
+//         set: function(age) {
+//             this.year = new Date().getFullYear() - age;
+//         }   
+//     }
+// });
 
-ford.calcDistPerYear();
+// ford.calcDistPerYear();
 
-for (let key in ford) {
-    if (ford.hasOwnProperty(key)) {
-        console.log(key, ford[key]);
+// for (let key in ford) {
+//     if (ford.hasOwnProperty(key)) {
+//         console.log(key, ford[key]);
+//     }
+
+
+let person = {
+    name: 'Max',
+    age: 35,
+    job: 'ProfessionalPinatelOfHuys'
+};
+
+for (let key in person) {
+    if (person.hasOwnProperty(key)) {
+        console.log(key, person[key]);
     }
 }
+
+let keys = Object.keys(person).forEach((key) => {
+    console.log(person[key]);
+});

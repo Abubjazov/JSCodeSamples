@@ -61,18 +61,61 @@
 //     }
 
 
-let person = {
-    name: 'Max',
-    age: 35,
-    job: 'ProfessionalPinatelOfHuys'
-};
+// let person = {
+//     name: 'Max',
+//     age: 35,
+//     job: 'ProfessionalPinatelOfHuys'
+// };
 
-for (let key in person) {
-    if (person.hasOwnProperty(key)) {
-        console.log(key, person[key]);
+// for (let key in person) {
+//     if (person.hasOwnProperty(key)) {
+//         console.log(key, person[key]);
+//     }
+// }
+
+// let keys = Object.keys(person).forEach((key) => {
+//     console.log(person[key]);
+// });
+
+let createCounter = function(counterName) {
+    let counter = 0
+
+    return {
+        increment: function() {
+            counter++
+        },
+        decrement: function() {
+            counter--
+        },
+        getCounter: function() {
+            return counter
+        }
     }
 }
 
-let keys = Object.keys(person).forEach((key) => {
-    console.log(person[key]);
-});
+let counterA = createCounter('Counter A')
+let counterB = createCounter('Counter B')
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

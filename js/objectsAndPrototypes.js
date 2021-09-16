@@ -77,26 +77,36 @@
 //     console.log(person[key]);
 // });
 
-let createCounter = function(counterName) {
-    let counter = 0
+// function createCounter(counterName) {
+//     let counter = 0
 
-    return {
-        increment: function() {
-            counter++
-        },
-        decrement: function() {
-            counter--
-        },
-        getCounter: function() {
-            return counter
-        }
+//     return {
+//         increment: function() {
+//             counter++
+//         },
+//         decrement: function() {
+//             counter--
+//         },
+//         getCounter: function() {
+//             return counter
+//         }
+//     }
+// }
+
+// let counterA = createCounter('Counter A')
+// let counterB = createCounter('Counter B')
+
+let person = {
+    age: 28,
+    name: 'Alex',
+    job: 'FrontEnd',
+    displayInfo: function (ms) {
+        // let self = this
+        setTimeout(function() {
+            console.log(`Name: ${this.name}\njob: ${this.job}\nage: ${this.age}`)
+        }.bind(this), ms)
     }
 }
-
-let counterA = createCounter('Counter A')
-let counterB = createCounter('Counter B')
-
-
 
 
 

@@ -46,7 +46,7 @@ roles.forEach(role => {
 
     phrases.forEach((line, j) => {
         if (line.indexOf(role) >= 0 && line.indexOf(role) < role.length) {
-            const content = line.slice(role.length+2);
+            const content = line.slice(role.length+1);
             temp += `${j + 1}) ${content}\n\n`;
         }
     });

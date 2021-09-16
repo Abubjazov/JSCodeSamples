@@ -96,17 +96,66 @@
 // let counterA = createCounter('Counter A')
 // let counterB = createCounter('Counter B')
 
-let person = {
-    age: 28,
-    name: 'Alex',
-    job: 'FrontEnd',
-    displayInfo: function (ms) {
-        // let self = this
-        setTimeout(function() {
-            console.log(`Name: ${this.name}\njob: ${this.job}\nage: ${this.age}`)
-        }.bind(this), ms)
+// let person = {
+//     age: 28,
+//     name: 'Alex',
+//     job: 'FrontEnd',
+//     displayInfo: function (ms) {
+//         // let self = this
+//         setTimeout(function() {
+//             console.log(`Name: ${this.name}\njob: ${this.job}\nage: ${this.age}`)
+//         }.bind(this), ms)
+//     }
+// }
+
+function printObj(objName) {
+    console.log(objName)
+    for (let key in this) {
+        if (this.hasOwnProperty(key)) {
+            console.log(`[${key}] - ${this[key]}`)
+        }
     }
 }
+
+let person = {
+    firstName: 'Abu',
+    job: 'BackEnd',
+    age: 21,
+    friends: ['Elena', 'Igor']
+}
+
+let car = {
+    name: 'Ford',
+    model: 'Focus',
+    year: 2017
+}
+
+let printPerson = printObj.bind(person)
+
+printPerson('PERSON')
+printObj.call(person, 'PERSON')
+printObj.apply(person, ['PERSON'])
+
+let printCar = printObj.bind(car)
+
+printCar('CAR')
+printObj.call(car, 'CAR')
+printObj.apply(car, ['CAR'])
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

@@ -1,4 +1,3 @@
-// asi
 const num1 = 13,
       num2 = 7;
 

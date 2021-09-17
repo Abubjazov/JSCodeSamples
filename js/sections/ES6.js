@@ -125,7 +125,6 @@ form.addEventListener('submit', e => {
     saveForm(form.title.value, form.text.value, form.desc.value) //Rest
 })
 
-
 //Spread
 // function saveForm(data) {
 //     const formData = {

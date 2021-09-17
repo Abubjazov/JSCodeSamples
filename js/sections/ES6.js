@@ -117,13 +117,13 @@
 
 // console.log(year)
 
-const form = document.querySelector('form')
+// const form = document.querySelector('form')
 
-form.addEventListener('submit', e => {
-    e.preventDefault()
-    // saveForm({title, text, desc}) //Spread
-    saveForm(form.title.value, form.text.value, form.desc.value) //Rest
-})
+// form.addEventListener('submit', e => {
+//     e.preventDefault()
+//     // saveForm({title, text, desc}) //Spread
+//     saveForm(form.title.value, form.text.value, form.desc.value) //Rest
+// })
 
 //Spread
 // function saveForm(data) {
@@ -136,13 +136,89 @@ form.addEventListener('submit', e => {
 // }
 
 //Rest
-function saveForm(...args) {
-    const[ title, text, desc] =  args
+// function saveForm(...args) {
+//     const[ title, text, desc] =  args
     
-    const formData = {
-        date: new Date().toLocaleDateString(),
-        title, text, desc
+//     const formData = {
+//         date: new Date().toLocaleDateString(),
+//         title, text, desc
+//     }
+
+//     console.log(formData)
+// }
+
+// const createLink = ({path, innerValue}) => `<a target="_blank" href="${path}">${innerValue}</a>`
+
+// const ul = document.querySelector('ul')
+
+// ul.insertAdjacentHTML('beforeend', `<li>${createLink({path: 'https://www.google.ru/', innerValue: 'Google'})}</li>`)
+// ul.insertAdjacentHTML('beforeend', `<li>${createLink({path: 'https://yandex.ru/', innerValue: 'Yandex'})}</li>`)
+// ul.insertAdjacentHTML('beforeend', `<li>${createLink({path: 'https://ru.wikipedia.org/', innerValue: 'Wikipedia'})}</li>`)
+
+
+class RootElement {
+    constructor(tagName = 'div') {
+        this.$el = document.createElement(tagName)
+        this.$el.style.marginBottom = '20px'
     }
 
-    console.log(formData)
+    hide() {
+        this.$el.style.opacity = '0'
+    }
+
+    show() {
+        this.$el.style.opacity = ''
+    }
+
+    appendElement() {
+        document.querySelector('.wrapper').insertAdjacentElement('afterbegin' ,this.$el)
+    }
 }
+
+class Box extends RootElement {
+    constructor( color, size = 150, tagName = 'div') {
+        super(tagName)
+        this.color = color
+        this.size = size
+    }
+
+    create() {
+        this.$el.style.background = this.color
+        this.$el.style.width = this.$el.style.height = `${this.size}px`
+        this.$el.style.transition = 'all .3s'
+
+        this.appendElement()
+
+        return this
+    }
+}
+
+class Circle extends RootElement {
+    constructor(color) {
+        super()
+        this.color = color
+    }
+
+    create() {
+        this.$el.style.background = this.color
+        this.$el.style.borderRadius = '50%'
+        this.$el.style.width = this.$el.style.height = '50px'
+        this.$el.style.transition = 'all .9s'
+
+        this.appendElement()
+
+        return this
+    }
+}
+
+const redBox = new Box('grey', 100, 'div').create()
+const blueBox = new Box('blue').create()
+const greenCircle = new Circle('green').create()
+
+greenCircle.$el.addEventListener('mouseenter', () => {
+    greenCircle.hide()
+})
+
+greenCircle.$el.addEventListener('mouseleave', () => {
+    greenCircle.show()
+})

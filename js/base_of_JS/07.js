@@ -58,11 +58,32 @@ console.log(clone)
 // console.log(obj)
 // console.log(numbers)
 
-const oldArray = ['a', 'b', 'c', ['q', 'd']],
-      newArray = oldArray.slice()
+// const oldArray = ['a', 'b', 'c', ['q', 'd']], //поверхностная копия
+//       newArray = oldArray.slice()
 
-newArray[2] = 'VVV'
-newArray[3][0] = 'VVV'
+// newArray[2] = 'VVV'
+// newArray[3][0] = 'VVV'
 
-console.log(oldArray)
+// console.log(oldArray)
+// console.log(newArray)
+
+const video = ['youtube', 'vimeo', 'rutube'],
+      blogs = ['wordpress', 'livejournal', 'blogger'],
+      interNed = [...video, ...blogs, 'vk', 'fb']
+
+console.log(interNed)
+
+function log(a, b, c) {
+    console.log(a, b, c)
+}
+
+const num = [3, 5, 8]
+
+log(...num)
+
+const array = ['a', 'b']
+
+const newArray = [...array]
+
 console.log(newArray)
+

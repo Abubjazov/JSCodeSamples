@@ -55,14 +55,18 @@ const personalMovieDB = {
              }
          
              console.log(this.genres.join(' '))
-        }
+        },
+        toggleVisibleMyDB: function () {this.privat = !this.privat}
     }
 
-personalMovieDB.start()
+// personalMovieDB.start()
 // personalMovieDB.rememberMyFilms()
-personalMovieDB.detectPersonalLevel()
+// personalMovieDB.detectPersonalLevel()
 // personalMovieDB.showMyDB()
 // personalMovieDB.writeYourGenres()
+console.log(personalMovieDB.privat)
+personalMovieDB.toggleVisibleMyDB()
+console.log(personalMovieDB.privat)
 
 // function start() {
 //     while (numberOfFilms === '' || numberOfFilms === null || isNaN(numberOfFilms)) {

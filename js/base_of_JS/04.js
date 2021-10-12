@@ -54,7 +54,9 @@ const personalMovieDB = {
                 this.genres.push(numb)  
              }
          
-             console.log(this.genres.join(' '))
+            this.genres.forEach((e, index) => {
+                console.log(`Любимый жанр # ${index + 1} - это: ${e}`)
+            })
         },
         toggleVisibleMyDB: function () {this.privat = !this.privat}
     }
@@ -63,10 +65,10 @@ const personalMovieDB = {
 // personalMovieDB.rememberMyFilms()
 // personalMovieDB.detectPersonalLevel()
 // personalMovieDB.showMyDB()
-// personalMovieDB.writeYourGenres()
-console.log(personalMovieDB.privat)
-personalMovieDB.toggleVisibleMyDB()
-console.log(personalMovieDB.privat)
+personalMovieDB.writeYourGenres()
+// console.log(personalMovieDB.privat)
+// personalMovieDB.toggleVisibleMyDB()
+// console.log(personalMovieDB.privat)
 
 // function start() {
 //     while (numberOfFilms === '' || numberOfFilms === null || isNaN(numberOfFilms)) {

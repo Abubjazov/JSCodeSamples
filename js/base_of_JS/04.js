@@ -5,8 +5,8 @@ const personalMovieDB = {
         genres: [], 
         privat: false,
         start: function () {
-            while (personalMovieDB.count === '' || personalMovieDB.count === null || isNaN(personalMovieDB.count)) {
-                personalMovieDB.count = prompt('Сколько фильмов вы уже посмотрели?')
+            while (this.count === '' || this.count === null || isNaN(this.count)) {
+                this.count = prompt('Сколько фильмов вы уже посмотрели?')
             }
         },
         rememberMyFilms: function () {
@@ -22,15 +22,15 @@ const personalMovieDB = {
                     grade = prompt('На сколько оцените его?')
                 }
             
-                personalMovieDB.movies[movie] = grade    
+                this.movies[movie] = grade    
             }
         },
         detectPersonalLevel: function () {
-            if (personalMovieDB.count !== null && !isNaN(personalMovieDB.count) && personalMovieDB.count !== '') {
+            if (this.count !== null && !isNaN(this.count) && this.count !== '') {
         
-                if (+personalMovieDB.count < 10) {
+                if (+this.count < 10) {
                         alert('Просмотрено довольно мало фильмов')
-                    } else if (+personalMovieDB.count >= 10 && +personalMovieDB.count < 30) {
+                    } else if (+this.count >= 10 && +this.count < 30) {
                         alert('Вы классический зритель')
                     } else {
                         alert('Вы киноман')
@@ -41,7 +41,7 @@ const personalMovieDB = {
             }
         },
         showMyDB: function () {
-            !personalMovieDB.privat && console.log(personalMovieDB)
+            !this.privat && console.log(this)
         },
         writeYourGenres: function () {
             for (let i = 0; i < 3; i++) {
@@ -51,10 +51,10 @@ const personalMovieDB = {
                      numb = prompt('Ваш любимый жанр под номером...')
                  }
              
-                 personalMovieDB.genres.push(numb)  
+                this.genres.push(numb)  
              }
          
-             console.log(personalMovieDB.genres.join(' '))
+             console.log(this.genres.join(' '))
         }
     }
 

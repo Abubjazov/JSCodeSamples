@@ -1,0 +1,10 @@
+// console.log((String(null)), typeof(String(null)))
+
+console.log((5 + ''), typeof(5 + ''))
+console.log((5 * ''), typeof(5 * ''))
+console.log((5 / ''), typeof(5 / ''))
+console.log((5 + 6), typeof(5 + 6))
+console.log((5 * null), typeof(5 * null))
+console.log((5 / null), typeof(5 / null))
+console.log((+'5'), typeof(+'5'))
+console.log(parseInt('15px'), typeof(parseInt('15px')))

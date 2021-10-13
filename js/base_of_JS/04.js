@@ -45,14 +45,14 @@ const personalMovieDB = {
         },
         writeYourGenres: function () {
             for (let i = 0; i < 3; i++) {
-                 let numb
-             
-                 while (numb === '' || numb === null || isNaN(numb)) {
-                     numb = prompt('Ваш любимый жанр под номером...')
-                 }
+                let numb
+            
+                while (numb === '' || numb === null || isNaN(numb)) {
+                    numb = prompt('Ваш любимый жанр под номером...')
+                }
              
                 this.genres.push(numb)  
-             }
+            }
          
             this.genres.forEach((e, index) => {
                 console.log(`Любимый жанр # ${index + 1} - это: ${e}`)

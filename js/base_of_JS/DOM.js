@@ -48,8 +48,13 @@ div.classList.add('added-class')
 // document.querySelector('form').append(div)
 // document.querySelector('form').prepend(text)
 
-btns[2].before(div)
-btns[2].after(text)
-btns[2].remove()
+// btns[2].before(div)
+// btns[2].after(text)
+// btns[2].remove()
 
-btns[0].replaceWith(inputs[1])
+// btns[0].replaceWith(inputs[1])
+
+document.querySelector('form').appendChild(div)
+
+div.innerHTML = '<h1>Пиривед медвеД!!!</h1>'
+div.insertAdjacentHTML('afterend', '<h2>Hello</h2>')

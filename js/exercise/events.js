@@ -12,22 +12,6 @@ document.addEventListener('DOMContentLoaded', () => {
         addConfirmBtn = document.querySelector('.promo__interactive .add button'),
         addInput = document.querySelector('.promo__interactive .add input[type="text"]')
 
-    const delMovieItem = e => {
-        const delItem = e.target.parentElement.textContent.trim()
-
-        let i = 0;
-
-        while (i < movieDB.movies.length) {
-            if (movieDB.movies[i].toUpperCase() === delItem.toUpperCase()) {
-                movieDB.movies.splice(i, 1);
-            } else {
-                ++i;
-            }
-        }
-
-        renderMovieDB()
-    }
-
     const renderMovieDB = () => {
         movieDB.movies.sort()
         movieList.innerHTML = ''
@@ -40,10 +24,13 @@ document.addEventListener('DOMContentLoaded', () => {
                 `
         })
 
-        const delItems = document.querySelectorAll('.delete')
-
-        delItems.forEach(item => {
-            item.addEventListener('click', delMovieItem)
+        document.querySelectorAll('.delete').forEach((item, index) => {
+            item.addEventListener('click', () => {
+                item.parentElement.remove()
+                movieDB.movies.splice(index, 1)
+        
+                renderMovieDB()
+            })
         })
     }
 

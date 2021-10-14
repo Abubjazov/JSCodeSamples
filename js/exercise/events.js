@@ -58,6 +58,8 @@ document.addEventListener('DOMContentLoaded', () => {
             if ( document.querySelector('[type="checkbox"]').checked ) console.log('Добавляем любимый фильм')
 
             renderMovieDB()
+
+            e.target.reset()
         }
     }
         

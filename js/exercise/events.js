@@ -50,11 +50,15 @@ document.addEventListener('DOMContentLoaded', () => {
     const submitAddMovie = e => {
         e.preventDefault()
 
-        addInput.value.length > 21 ? movieDB.movies.push(addInput.value.slice(0, 21) + '...') : movieDB.movies.push(addInput.value)
+        if (addInput.value) {
+            addInput.value.length > 21 
+                ? movieDB.movies.push(addInput.value.slice(0, 21) + '...') 
+                : movieDB.movies.push(addInput.value)
+            
+            if ( document.querySelector('[type="checkbox"]').checked ) console.log('Добавляем любимый фильм')
 
-        if ( document.querySelector('[type="checkbox"]').checked ) console.log('Добавляем любимый фильм')
-
-        renderMovieDB()
+            renderMovieDB()
+        }
     }
         
     addConfirmBtn.addEventListener('click', submitAddMovie)

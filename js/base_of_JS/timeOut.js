@@ -30,41 +30,68 @@
 //     id = setTimeout(log, 500)
 // }, 500)
 
-const btn = document.querySelector('.btn')
-let timerId, i = 0
+// const btn = document.querySelector('.btn')
+// let timerId, i = 0
+
+// function myAnimation() {
+//     const elem = document.querySelector('.box')
+//     let pos = 0
+
+//     const id = setInterval(frame, 10)
+//     function frame() {
+//         if (pos === 300) {
+//             clearInterval(id)
+//             myAnimation2()
+//         } else {
+//             pos++
+//             elem.style.top = pos + 'px'
+//             elem.style.left = pos + 'px'
+//         }
+//     }
+// }
+
+// function myAnimation2() {
+//     const elem = document.querySelector('.box')
+//     let pos = 300
+
+//     const id = setInterval(frame, 10)
+//     function frame() {
+//         if (pos === 0) {            
+//             clearInterval(id)
+//             myAnimation()
+//         } else {
+//             pos--
+//             elem.style.top = pos + 'px'
+//             elem.style.left = pos + 'px'
+//         }
+//     }
+// }
+
+document.querySelector('.btn').addEventListener('click', myAnimation)
+
+const elem = document.querySelector('.box')
+let   pos = 0
 
 function myAnimation() {
-    const elem = document.querySelector('.box')
-    let pos = 0
-
-    const id = setInterval(frame, 10)
-    function frame() {
-        if (pos === 300) {
-            clearInterval(id)
-            myAnimation2()
-        } else {
-            pos++
-            elem.style.top = pos + 'px'
-            elem.style.left = pos + 'px'
-        }
+    pos++
+    elem.style.top = pos + 'px'
+    elem.style.left = pos + 'px'
+        
+    if (pos === 300) {
+        requestAnimationFrame(myAnimationRev)
+    } else {
+        requestAnimationFrame(myAnimation)
     }
 }
 
-function myAnimation2() {
-    const elem = document.querySelector('.box')
-    let pos = 300
-
-    const id = setInterval(frame, 10)
-    function frame() {
-        if (pos === 0) {            
-            clearInterval(id)
-            myAnimation()
-        } else {
-            pos--
-            elem.style.top = pos + 'px'
-            elem.style.left = pos + 'px'
-        }
+function myAnimationRev() {
+    pos--
+    elem.style.top = pos + 'px'
+    elem.style.left = pos + 'px'
+        
+    if (pos === 0) {            
+        requestAnimationFrame(myAnimation)
+    } else {
+        requestAnimationFrame(myAnimationRev)
     }
 }
-
-myAnimation()

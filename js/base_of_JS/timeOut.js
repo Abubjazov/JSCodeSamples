@@ -67,7 +67,7 @@
 //     }
 // }
 
-document.querySelector('.btn').addEventListener('click', myAnimation)
+document.querySelector('#start').addEventListener('click', myAnimation, {once: true})
 
 const elem = document.querySelector('.box')
 let   pos = 0
@@ -78,6 +78,7 @@ function myAnimation() {
     elem.style.left = pos + 'px'
         
     if (pos === 300) {
+        cancelAnimationFrame(myAnimation)
         requestAnimationFrame(myAnimationRev)
     } else {
         requestAnimationFrame(myAnimation)
@@ -89,7 +90,8 @@ function myAnimationRev() {
     elem.style.top = pos + 'px'
     elem.style.left = pos + 'px'
         
-    if (pos === 0) {            
+    if (pos === 0) {      
+        cancelAnimationFrame(myAnimationRev)      
         requestAnimationFrame(myAnimation)
     } else {
         requestAnimationFrame(myAnimationRev)

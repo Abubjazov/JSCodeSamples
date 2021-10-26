@@ -5,18 +5,25 @@ function anagrams(word, words) {
     words.forEach((item, index) => wordSet.join('') === [...(new Set([...item]))].sort().join('') && word.length === words[index].length ? res.push(words[index]) : null)
 
     if (res.length != 0) {
+        const wordArr = word.split('')
         let tempRes = [],
             tempWord = []
 
         wordSet.forEach(elem => { 
-            tempWord.push([...word.matchAll(`${elem}`)].length)
+            let e = 0
+
+            wordArr.forEach(i => i === elem ? e++ : null)            
+            tempWord.push(e)
         })
 
-        res.forEach((elem) => {
+        res.forEach(elem => {
             let temp = []
 
-            wordSet.forEach(i => { 
-                temp.push([...elem.matchAll(`${i}`)].length)
+            wordSet.forEach(elem => {
+                let e = 0
+
+                wordArr.forEach(i => i === elem ? e++ : null)
+                temp.push(e)
             })
             
             temp[0] === tempWord[0] ? tempRes.push(elem) : null            

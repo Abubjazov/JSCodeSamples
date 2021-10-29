@@ -3,11 +3,11 @@ function formatDuration (time) {
     if (time === 0) return 'now'
 
     const resObj = {
-        years: Math.round((time / (60 * 60 * 24 * 365))),
-        days: Math.round((time / (60 * 60 * 24)) % 365),
-        hours: Math.round((time / (60 * 60)) % 24),
-        minutes: Math.round((time / 60) % 60),
-        seconds: Math.round(time % 60)
+        years: Math.floor((time / (60 * 60 * 24 * 365))),
+        days: Math.floor((time / (60 * 60 * 24)) % 365),
+        hours: Math.floor((time / (60 * 60)) % 24),
+        minutes: Math.floor((time / 60) % 60),
+        seconds: Math.floor(time % 60)
     }
 
     let resArr = []

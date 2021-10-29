@@ -3,18 +3,18 @@ function formatDuration (time) {
     if (time === 0) return 'now'
 
     const resObj = {
-        years: Math.floor((time / (60 * 60 * 24 * 365))),
-        days: Math.floor((time / (60 * 60 * 24)) % 365),
-        hours: Math.floor((time / (60 * 60)) % 24),
+        years:   Math.floor((time / (60 * 60 * 24 * 365))),
+        days:    Math.floor((time / (60 * 60 * 24)) % 365),
+        hours:   Math.floor((time / (60 * 60)) % 24),
         minutes: Math.floor((time / 60) % 60),
         seconds: Math.floor(time % 60)
     }
 
     let resArr = []
 
-    if (resObj.years > 0) { resObj.years === 1 ? resArr.push(`${resObj.years} year`) : resArr.push(`${resObj.years} years`) }
-    if (resObj.days > 0) { resObj.days === 1 ? resArr.push(`${resObj.days} day`) : resArr.push(`${resObj.days} days`) }
-    if (resObj.hours > 0) resObj.hours === 1 ? resArr.push(`${resObj.hours} hour`) : resArr.push(`${resObj.hours} hours`)    
+    if (resObj.years > 0)   resObj.years === 1 ? resArr.push(`${resObj.years} year`) : resArr.push(`${resObj.years} years`)
+    if (resObj.days > 0)    resObj.days === 1 ? resArr.push(`${resObj.days} day`) : resArr.push(`${resObj.days} days`)
+    if (resObj.hours > 0)   resObj.hours === 1 ? resArr.push(`${resObj.hours} hour`) : resArr.push(`${resObj.hours} hours`)    
     if (resObj.minutes > 0) resObj.minutes === 1 ? resArr.push(`${resObj.minutes} minute`) : resArr.push(`${resObj.minutes} minutes`) 
     if (resObj.seconds > 0) resObj.seconds === 1 ? resArr.push(`${resObj.seconds} second`) : resArr.push(`${resObj.seconds} seconds`)
 

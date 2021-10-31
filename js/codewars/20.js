@@ -44,8 +44,6 @@
 //      input digits: 0123456789
 //      input symbols: ',', ' ', '?', '.'
 //      ignore symbols: !@#$%^&*()_+-
-//
-//      function call options: (device.encode ('_'+ a)[1]), (device.encode ('__'+ a)[2])
 //    
 //      Кодирование ведётся посимвольно с учётом индекса символа в входной последовательности как смещения по encodefrase.
 //      Алгоритм кодирования: 

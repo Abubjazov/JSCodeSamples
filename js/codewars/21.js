@@ -138,3 +138,45 @@ console.log(retFirst(encodedString, 8))
         // if (freqPercent < 0.772)   {eSeq = 'JKLMNOPQRSTUVWXYZABCDEFGHI'}
         // if (freqPercent < 0.153)   {eSeq = 'XYZABCDEFGHIJKLMNOPQRSTUVW'}
         // if (freqPercent < 0.150)   {eSeq = 'QRSTUVWXYZABCDEFGHIJKLMNOP'}
+
+
+// keylen: 1 key: E this: 2ms tot: 53ms
+// keylen: 1 key: A this: 2ms tot: 55ms
+// keylen: 1 key: X this: 1ms tot: 57ms
+// keylen: 1 key: F this: 1ms tot: 58ms
+// keylen: 1 key: C this: 1ms tot: 60ms
+// keylen: 1 key: F this: 3ms tot: 63ms
+// keylen: 1 key: I this: 1ms tot: 67ms
+// keylen: 1 key: R this: 1ms tot: 69ms
+// keylen: 1 key: W this: 1ms tot: 70ms
+// keylen: 1 key: O this: 1ms tot: 72ms
+// keylen: 1 key: I this: 1ms tot: 74ms
+// keylen: 1 key: W this: 1ms tot: 75ms
+// keylen: 1 key: C this: 1ms tot: 77ms
+// keylen: 1 key: V this: 1ms tot: 79ms
+// keylen: 1 key: P this: 1ms tot: 80ms
+// keylen: 1 key: O this: 1ms tot: 82ms
+// keylen: 1 key: Z this: 1ms tot: 83ms
+// keylen: 1 key: T this: 1ms tot: 85ms
+// keylen: 1 key: C this: 1ms tot: 87ms
+// keylen: 1 key: Y this: 2ms tot: 89ms
+// keylen: 2 key: NQ this: 1ms tot: 90ms
+// keylen: 2 key: BZ this: 1ms tot: 92ms
+// keylen: 2 key: FA this: 1ms tot: 94ms
+// keylen: 2 key: ZD this: 1ms tot: 95ms
+// keylen: 2 key: GP this: 12ms tot: 107ms
+// keylen: 2 key: OK this: 1ms tot: 108ms
+// keylen: 2 key: RB this: 1ms tot: 109ms
+// keylen: 2 key: QA this: 0ms tot: 110ms
+// keylen: 2 key: SV this: 5ms tot: 116ms
+// keylen: 2 key: FH this: 1ms tot: 117ms
+// keylen: 2 key: JK this: 1ms tot: 118ms
+// keylen: 2 key: IK this: 1ms tot: 119ms
+// keylen: 2 key: CM this: 1ms tot: 121ms
+// keylen: 2 key: XP this: 1ms tot: 122ms
+// keylen: 2 key: BK this: 1ms tot: 123ms
+// keylen: 2 key: XJ this: 2ms tot: 129ms
+// keylen: 2 key: RE this: 1ms tot: 130ms
+// keylen: 2 key: PB this: 1ms tot: 131ms
+// keylen: 2 key: VS this: 1ms tot: 132ms
+// keylen: 2 key: XL this: 1ms tot: 134ms

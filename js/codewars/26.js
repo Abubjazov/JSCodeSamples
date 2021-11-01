@@ -53,7 +53,7 @@ function decodeRailFenceCipher(string, numberRails) {
     return Object.values(resObj).join('')
 }
 
-// console.log(decodeRailFenceCipher(encodeRailFenceCipher("0123456789ABCDEFGHIJ", 3), 3))
+console.log(decodeRailFenceCipher(encodeRailFenceCipher("0123456789ABCDEFGHIJ", 3), 3))
 
 // [1]         [2]               [3]
 //048CG     13579BDFHJ        26AEI    20
@@ -73,6 +73,3 @@ function decodeRailFenceCipher(string, numberRails) {
 
 //[1]: Math.floor(str.length / 3) - 2
 //[2]: Math.floor(str.length / 2)
-
-
-

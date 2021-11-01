@@ -18,23 +18,16 @@ function parseInt(string) {
 
     string.forEach(word => word.split('').filter(item => item === '-')[0] === '-' ? resultArr.push(+parseSep(word)) : resultArr.push(digiBox[word]))
 
-    console.log(string)
-    console.log(resultArr)
-
     if (resultArr.indexOf(1000000) != '-1') {
         let a = resultArr.shift(),
             b = resultArr.shift()
 
         result += a * b
-
-        console.log(resultArr)
-        console.log(result)
     }
 
     if (resultArr.indexOf(1000) != '-1') {
         const tmp = resultArr.slice(0, resultArr.indexOf(1000))
         let resTmp = 0
-        console.log(tmp)
 
         if (tmp.indexOf(100) != '-1') {
             let a = tmp.shift(),
@@ -42,18 +35,13 @@ function parseInt(string) {
         
         tmp.push(a * b)
         }
-        console.log(tmp)
         tmp.forEach(item => resTmp += item)
-        console.log(result += resTmp * 1000)
         
         let counter = resultArr.indexOf(1000) + 1
-        console.log(counter)
         while (counter > 0) {
             resultArr.shift()
             counter--
         }
-        console.log(resultArr)
-        console.log(result)
     }
 
     if (resultArr.indexOf(100) != '-1') {
@@ -61,19 +49,14 @@ function parseInt(string) {
             b = resultArr.shift()
 
         result += a * b
-
-        console.log(resultArr)
-        console.log(result)
     }
 
     resultArr.forEach(item => result += item)
 
-    console.log(result)
-
     return result    
 }
 
-parseInt('one million')
+console.log(parseInt('eight hundred twenty-seven thousand three hundred twenty-three'))
 
 // parseInt('nine hundred forty-three thousand six hundred twenty-nine') //6666666 -> six * million + (ssix * hundred + sixty-six) * thousand + six * hundred + sixty-six
 // console.log(parseInt('six hundred forty-three thousand nine hundred and twenty-nine')) //643929

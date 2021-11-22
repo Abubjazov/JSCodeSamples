@@ -1,8 +1,8 @@
-function toCamelCase(str){
+function toCamelCase(str) {
     let strArr = []
 
     if (str.split('-').length > 1) {
-       strArr = str.split('-')
+        strArr = str.split('-')
     } else {
         strArr = str.split('_')
     }
@@ -14,9 +14,9 @@ function toCamelCase(str){
         }
         strArr[i] = temp.join('')
     }
-    
+
     return strArr.join('')
 }
 
-str = "The-stealth-warrior"
+str = "The-stealth-warriors"
 toCamelCase(str)

@@ -1,6 +1,7 @@
 
-const reducer = (accumulator, currentValue) => accumulator + currentValue.charCodeAt(0)
-const compareStrings = (str1, str2) => str1.split('').reduce(reducer, 0) === str2.split('').reduce(reducer, 0)
+const strReducer = (accumulator, currentValue) => accumulator + currentValue.charCodeAt(0)
+const transformString = (string) => string.split('').reduce(strReducer, 0)
+const compareStrings = (str1, str2) => transformString(str1) === transformString(str2)
 
 const str1 = "dog", str2 = "dgo"
 const str11 = "dog", str22 = "dfo"
